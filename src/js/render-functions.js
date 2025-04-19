@@ -15,19 +15,19 @@ export function createGallery(images) {
       </a>
   </li>
   <div class="text-container">
-      <li>
+      <li class="text-item">
         <h2>Likes</h2>
         <p>${item.likes}</p>
       </li>
-       <li>
+       <li class="text-item">
         <h2>Views</h2>
         <p>${item.views}</p>
       </li>
-       <li>
+       <li class="text-item">
         <h2>Comments</h2>
         <p>${item.comments}</p>
       </li>
-       <li>
+       <li class="text-item">
         <h2>Downloads</h2>
         <p>${item.downloads}</p>
       </li>

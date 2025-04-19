@@ -16,15 +16,16 @@ function handlSubmit(event) {
   clearGallery();
   const searchText = event.target.elements['search-text'].value;
 
-  console.log(searchText);
   showLoader();
+
   getImagesByQuery(searchText)
     .then(response => {
       if (response.data.hits.length === 0) {
-        iziToast.show({
+        iziToast.error({
           message:
             'Sorry, there are no images matching your search query. Please try again!',
           position: 'topRight',
+          backgroundColor: '#ef4040',
         });
       }
       hideLoader();

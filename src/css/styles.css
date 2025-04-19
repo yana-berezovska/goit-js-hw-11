@@ -41,19 +41,46 @@ body {
     transform: rotate(360deg);
   }
 }
-
+.image-container {
+  border: 1px solid #808080;
+  width: 360px;
+  height: 200px;
+}
+.text-container {
+  display: flex;
+  justify-content: space-around;
+  height: 48px;
+}
+.text-item {
+  align-content: center;
+  text-align: center;
+}
+h2 {
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 133%;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+}
+p {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 200%;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+}
 .gallery {
+  margin-top: 20px;
   display: flex;
   flex-wrap: wrap;
   gap: 24px;
   list-style: none;
-  max-width: 1128px;
   justify-content: center;
 }
 
 .gallery-item {
   width: 360px;
-  height: 200px;
+  height: 152px;
   position: relative;
 }
 
@@ -70,6 +97,7 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
+  object-fit: cover;
   transform: translate(-50%, -50%);
   transition: transform 0.3s ease, width 0.3s ease, height 0.3s ease;
 }
@@ -79,9 +107,11 @@ body {
   height: 208px;
 }
 
-.form-wraper {
-  max-width: 360px;
-  margin-bottom: 8px;
+.form {
+  margin-top: 5px;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
 }
 label {
   display: block;
@@ -92,8 +122,7 @@ label {
   letter-spacing: 0.04em;
   color: #2e2f42;
 }
-input,
-textarea {
+input {
   border: 1px solid #808080;
   border-radius: 4px;
   width: 100%;
@@ -102,17 +131,12 @@ textarea {
   background-color: transparent;
   box-sizing: border-box;
   color: #2e2f42;
-}
-input {
+
+  width: 272px;
   height: 40px;
 }
-textarea {
-  resize: none;
-  padding-top: 8px;
-  height: 80px;
-}
-input:hover,
-textarea:hover {
+
+input:hover {
   border: 1.5px solid #000;
 }
 button {
@@ -120,7 +144,7 @@ button {
   border: 0;
   border-radius: 8px;
   padding: 8px 16px;
-  width: 95px;
+  width: 91px;
   height: 40px;
   background-color: #4e75ff;
   font-weight: 500;
@@ -132,7 +156,6 @@ button {
 
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  margin-top: 8px;
 }
 button:hover {
   background-color: #6c8cff;
