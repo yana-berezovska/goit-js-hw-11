@@ -49,13 +49,11 @@ export function clearGallery() {
 }
 
 export function showLoader() {
-  const loader = document.createElement('span');
-  loader.classList.add('loader');
-
-  gallery.prepend(loader);
+  const loader = document.querySelector('.loader');
+  loader.classList.add('active');
 }
 
 export function hideLoader() {
   const loader = document.querySelector('.loader');
-  loader.remove();
+  loader.classList.remove('active');
 }

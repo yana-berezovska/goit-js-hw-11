@@ -11,18 +11,23 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 .loader {
+  display: none;
   width: 48px;
   height: 48px;
   border-width: 3px;
   border-style: dashed solid solid dotted;
   border-color: #131111 #48413e transparent #262220;
   border-radius: 50%;
-  display: inline-block;
   position: relative;
   box-sizing: border-box;
+}
+
+.loader.active {
+  display: inline-block;
   animation: rotation 1s linear infinite;
 }
-.loader::after {
+
+.loader.active::after {
   content: '';
   box-sizing: border-box;
   position: absolute;
