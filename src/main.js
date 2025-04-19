@@ -14,6 +14,18 @@ function handlSubmit(event) {
   event.preventDefault();
 
   clearGallery();
+
+  const query = form.elements['search-text'].value.trim();
+  if (!query) {
+    form.reset();
+    iziToast.error({
+      message: 'Please fill in the search field!',
+      position: 'topRight',
+      backgroundColor: '#ef4040',
+    });
+    return;
+  }
+
   const searchText = event.target.elements['search-text'].value;
 
   showLoader();
