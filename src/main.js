@@ -45,5 +45,11 @@ function handlSubmit(event) {
     })
     .catch(error => {
       console.log(error);
+      iziToast.error({
+        message: 'Something went wrong.Please try again later!',
+        position: 'topRight',
+        backgroundColor: '#ef4040',
+      });
+      hideLoader();
     });
 }
